@@ -10,6 +10,13 @@
 		B24A7A0D22AE5B9A00EBA62C /* OTF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24A7A0322AE5B9A00EBA62C /* OTF.framework */; };
 		B24A7A1222AE5B9A00EBA62C /* OTFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A7A1122AE5B9A00EBA62C /* OTFTests.swift */; };
 		B24A7A1422AE5B9A00EBA62C /* OTF.h in Headers */ = {isa = PBXBuildFile; fileRef = B24A7A0622AE5B9A00EBA62C /* OTF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B24A7A4622AE5C7300EBA62C /* OTFBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A7A4522AE5C7300EBA62C /* OTFBase.swift */; };
+		B24A7A7122AE61C300EBA62C /* OTFSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A7A7022AE61C300EBA62C /* OTFSelector.swift */; };
+		B24A7A7322AE64AF00EBA62C /* OTFBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A7A7222AE64AF00EBA62C /* OTFBaseProtocol.swift */; };
+		B24A7A7522AE662100EBA62C /* OTFType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A7A7422AE662100EBA62C /* OTFType.swift */; };
+		B24A7A7722AE673F00EBA62C /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A7A7622AE673F00EBA62C /* OrderedSet.swift */; };
+		B24A7A8722AE8BDB00EBA62C /* NSFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A7A8622AE8BDB00EBA62C /* NSFont + Extensions.swift */; };
+		B24A7A8922AE90E500EBA62C /* OTFAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A7A8822AE90E500EBA62C /* OTFAxis.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,13 @@
 		B24A7A0C22AE5B9A00EBA62C /* OTFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24A7A1122AE5B9A00EBA62C /* OTFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFTests.swift; sourceTree = "<group>"; };
 		B24A7A1322AE5B9A00EBA62C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B24A7A4522AE5C7300EBA62C /* OTFBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFBase.swift; sourceTree = "<group>"; };
+		B24A7A7022AE61C300EBA62C /* OTFSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFSelector.swift; sourceTree = "<group>"; };
+		B24A7A7222AE64AF00EBA62C /* OTFBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFBaseProtocol.swift; sourceTree = "<group>"; };
+		B24A7A7422AE662100EBA62C /* OTFType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFType.swift; sourceTree = "<group>"; };
+		B24A7A7622AE673F00EBA62C /* OrderedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
+		B24A7A8622AE8BDB00EBA62C /* NSFont + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSFont + Extensions.swift"; path = "../../OTFKit/OTFKit/NSFont + Extensions.swift"; sourceTree = "<group>"; };
+		B24A7A8822AE90E500EBA62C /* OTFAxis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OTFAxis.swift; path = ../../OTFKit/OTFKit/OTFAxis.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +87,13 @@
 			children = (
 				B24A7A0622AE5B9A00EBA62C /* OTF.h */,
 				B24A7A0722AE5B9A00EBA62C /* Info.plist */,
+				B24A7A7222AE64AF00EBA62C /* OTFBaseProtocol.swift */,
+				B24A7A4522AE5C7300EBA62C /* OTFBase.swift */,
+				B24A7A7022AE61C300EBA62C /* OTFSelector.swift */,
+				B24A7A7422AE662100EBA62C /* OTFType.swift */,
+				B24A7A7622AE673F00EBA62C /* OrderedSet.swift */,
+				B24A7A8622AE8BDB00EBA62C /* NSFont + Extensions.swift */,
+				B24A7A8822AE90E500EBA62C /* OTFAxis.swift */,
 			);
 			path = OTF;
 			sourceTree = "<group>";
@@ -148,6 +169,7 @@
 				TargetAttributes = {
 					B24A7A0222AE5B9A00EBA62C = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					B24A7A0B22AE5B9A00EBA62C = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +216,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B24A7A7122AE61C300EBA62C /* OTFSelector.swift in Sources */,
+				B24A7A4622AE5C7300EBA62C /* OTFBase.swift in Sources */,
+				B24A7A7522AE662100EBA62C /* OTFType.swift in Sources */,
+				B24A7A8922AE90E500EBA62C /* OTFAxis.swift in Sources */,
+				B24A7A7322AE64AF00EBA62C /* OTFBaseProtocol.swift in Sources */,
+				B24A7A7722AE673F00EBA62C /* OrderedSet.swift in Sources */,
+				B24A7A8722AE8BDB00EBA62C /* NSFont + Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +369,7 @@
 		B24A7A1822AE5B9A00EBA62C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -359,6 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.OTF;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -366,6 +397,7 @@
 		B24A7A1922AE5B9A00EBA62C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -392,6 +424,7 @@
 		B24A7A1B22AE5B9A00EBA62C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3ASHMCMJEN;
@@ -410,6 +443,7 @@
 		B24A7A1C22AE5B9A00EBA62C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3ASHMCMJEN;

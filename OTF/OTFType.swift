@@ -1,0 +1,48 @@
+//
+//  OTFFeatureType.swift
+//  OTF
+//
+//  Created by Łukasz Dziedzic on 10/06/2019.
+//  Copyright © 2019 Łukasz Dziedzic. All rights reserved.
+//
+
+import Foundation
+
+
+
+public protocol OTFTypeProtocol: OTFBaseProtocol {
+    
+    associatedtype Selector: OTFSelectorProtocol
+    
+    var selectors: OrderedSet<Selector> {get}
+    var exclusive: Int? {get}
+}
+
+open class OTFType<S:OTFSelectorProtocol>: OTFBase, OTFTypeProtocol {
+    
+    public typealias Selector = S
+    
+    public var exclusive:Int? = nil
+    public var selectors: OrderedSet<Selector>
+    
+    public init(name: String,
+                nameID: Int?,
+                identifier: Int,
+                exclusive: Int?,
+                selectors: OrderedSet<Selector> = [])
+    {
+        self.exclusive = exclusive
+        self.selectors = selectors
+        super.init(name: name, nameID: nameID, identifier: identifier)
+    }
+    
+
+}
+
+extension OTFType: CustomStringConvertible {
+    
+    public var description:String {
+        return "Type \(name)"
+    }
+    
+}
