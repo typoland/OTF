@@ -11,12 +11,12 @@ import Foundation
 open class OTFBase: OTFBaseProtocol {
 
     @objc public var name: String = ""
-    public var nameID: Int = 0
+    public var nameID: Int? = 0
     @objc public var identifier: Int = 0
     
-    init(name:String, nameID:Int?, identifier:Int) {
+    init(name:String, nameID: Int?, identifier: Int) {
         self.name = name
-        self.nameID = nameID ?? 0
+        self.nameID = nameID
         self.identifier = identifier
     }
 }

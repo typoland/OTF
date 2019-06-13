@@ -23,7 +23,7 @@ open class OTFSelector: OTFBase, OTFSelectorProtocol {
 
     public var defaultSelector: Int?
 
-    public init(name: String, nameID: Int?, identifier: Int, defaultSelector: Int?) {
+    public init(name: String, nameID: Int, identifier: Int, defaultSelector: Int) {
         self.defaultSelector = defaultSelector
         super.init(name: name, nameID: nameID, identifier: identifier)
     }
