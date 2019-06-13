@@ -13,8 +13,8 @@ import Foundation
 public protocol OTFTypeProtocol: OTFBaseProtocol {
     
     associatedtype Selector: OTFSelectorProtocol
-    
-    var selectors: OrderedSet<Selector> {get}
+    associatedtype Selectors: Sequence where Selectors.Element == Selector
+    var selectors: Selectors {get}
     var exclusive: Int? {get}
 }
 
