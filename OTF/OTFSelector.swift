@@ -8,17 +8,6 @@
 
 import Foundation
 
-public protocol OTFSelectorProtocol: OTFBaseProtocol {
-    var defaultSelector: Int {get}
-    init (name: String, nameID: Int, identifier: Int, defaultSelector: Int)
-}
-
-public extension OTFSelectorProtocol {
-    func hash(into hasher: inout Hasher) {
-        return hasher.combine(defaultSelector)
-    }
-}
-
 
 open class OTFSelector: OTFBase, OTFSelectorProtocol {
 

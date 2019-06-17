@@ -10,14 +10,6 @@ import Foundation
 
 
 
-public protocol OTFTypeProtocol: OTFBaseProtocol {
-    
-    associatedtype Selector: OTFSelectorProtocol
-    associatedtype Selectors: Sequence where Selectors.Element == Selector
-    var selectors: Selectors {get}
-    var exclusive: Int {get}
-    init (name: String, nameID: Int, identifier: Int, exclusive: Int, selectors: Selectors)
-}
 
 open class OTFType<S: OTFSelectorProtocol>: OTFBase, OTFTypeProtocol {
     
