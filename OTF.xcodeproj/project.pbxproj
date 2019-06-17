@@ -17,6 +17,7 @@
 		B24A7A7722AE673F00EBA62C /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A7A7622AE673F00EBA62C /* OrderedSet.swift */; };
 		B24A7A8722AE8BDB00EBA62C /* NSFont + OTFAxis Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A7A8622AE8BDB00EBA62C /* NSFont + OTFAxis Extensions.swift */; };
 		B24A7A8922AE90E500EBA62C /* OTFAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24A7A8822AE90E500EBA62C /* OTFAxis.swift */; };
+		B2E5006622B7EA5600BBAE79 /* NSFont + OTFExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5006522B7EA5600BBAE79 /* NSFont + OTFExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		B24A7A7622AE673F00EBA62C /* OrderedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
 		B24A7A8622AE8BDB00EBA62C /* NSFont + OTFAxis Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSFont + OTFAxis Extensions.swift"; path = "../../OTFKit/OTFKit/NSFont + OTFAxis Extensions.swift"; sourceTree = "<group>"; };
 		B24A7A8822AE90E500EBA62C /* OTFAxis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OTFAxis.swift; path = ../../OTFKit/OTFKit/OTFAxis.swift; sourceTree = "<group>"; };
+		B2E5006522B7EA5600BBAE79 /* NSFont + OTFExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFont + OTFExtensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				B24A7A7422AE662100EBA62C /* OTFType.swift */,
 				B24A7A8822AE90E500EBA62C /* OTFAxis.swift */,
 				B24A7A8622AE8BDB00EBA62C /* NSFont + OTFAxis Extensions.swift */,
+				B2E5006522B7EA5600BBAE79 /* NSFont + OTFExtensions.swift */,
 			);
 			path = OTF;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				B24A7A7122AE61C300EBA62C /* OTFSelector.swift in Sources */,
 				B24A7A4622AE5C7300EBA62C /* OTFBase.swift in Sources */,
 				B24A7A7522AE662100EBA62C /* OTFType.swift in Sources */,
+				B2E5006622B7EA5600BBAE79 /* NSFont + OTFExtensions.swift in Sources */,
 				B24A7A8922AE90E500EBA62C /* OTFAxis.swift in Sources */,
 				B24A7A7322AE64AF00EBA62C /* OTFBaseProtocol.swift in Sources */,
 				B24A7A7722AE673F00EBA62C /* OrderedSet.swift in Sources */,
