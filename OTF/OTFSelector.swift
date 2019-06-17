@@ -9,7 +9,8 @@
 import Foundation
 
 public protocol OTFSelectorProtocol: OTFBaseProtocol {
-    var defaultSelector: Int? {get}
+    var defaultSelector: Int {get}
+    init (name: String, nameID: Int, identifier: Int, defaultSelector: Int)
 }
 
 public extension OTFSelectorProtocol {
@@ -21,14 +22,12 @@ public extension OTFSelectorProtocol {
 
 open class OTFSelector: OTFBase, OTFSelectorProtocol {
 
-    public var defaultSelector: Int?
+    public var defaultSelector: Int
 
-    public init(name: String, nameID: Int, identifier: Int, defaultSelector: Int) {
+    required public init(name: String, nameID: Int, identifier: Int, defaultSelector: Int) {
         self.defaultSelector = defaultSelector
         super.init(name: name, nameID: nameID, identifier: identifier)
-    }
-    
-    
+    } 
 }
 
 extension OTFSelector: CustomStringConvertible {

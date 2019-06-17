@@ -87,13 +87,13 @@
 			children = (
 				B24A7A0622AE5B9A00EBA62C /* OTF.h */,
 				B24A7A0722AE5B9A00EBA62C /* Info.plist */,
+				B24A7A7622AE673F00EBA62C /* OrderedSet.swift */,
 				B24A7A7222AE64AF00EBA62C /* OTFBaseProtocol.swift */,
 				B24A7A4522AE5C7300EBA62C /* OTFBase.swift */,
 				B24A7A7022AE61C300EBA62C /* OTFSelector.swift */,
 				B24A7A7422AE662100EBA62C /* OTFType.swift */,
-				B24A7A7622AE673F00EBA62C /* OrderedSet.swift */,
-				B24A7A8622AE8BDB00EBA62C /* NSFont + OTFAxis Extensions.swift */,
 				B24A7A8822AE90E500EBA62C /* OTFAxis.swift */,
+				B24A7A8622AE8BDB00EBA62C /* NSFont + OTFAxis Extensions.swift */,
 			);
 			path = OTF;
 			sourceTree = "<group>";

@@ -16,25 +16,27 @@ public protocol OTFTypeProtocol: OTFBaseProtocol {
     associatedtype Selectors: Sequence where Selectors.Element == Selector
     var selectors: Selectors {get}
     var exclusive: Int {get}
+    init (name: String, nameID: Int, identifier: Int, exclusive: Int, selectors: Selectors)
 }
 
-open class OTFType<Selector: OTFSelectorProtocol>: OTFBase, OTFTypeProtocol {
+open class OTFType<S: OTFSelectorProtocol>: OTFBase, OTFTypeProtocol {
     
-    public typealias Selector = Selector
-    
-    public var exclusive:Int
+    public typealias Selector = S
     public var selectors: OrderedSet<Selector>
+    public var exclusive:Int
     
-    public init(name: String,
+    
+    required public init(name: String,
                 nameID: Int,
                 identifier: Int,
                 exclusive: Int,
-                selectors: OrderedSet<Selector> = [])
+                selectors: OrderedSet<Selector>)
     {
         self.exclusive = exclusive
         self.selectors = selectors
         super.init(name: name, nameID: nameID, identifier: identifier)
     }
+
 }
 
 extension OTFType: CustomStringConvertible {

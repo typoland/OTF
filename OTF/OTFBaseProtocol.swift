@@ -10,9 +10,10 @@ import Foundation
 
 public protocol OTFBaseProtocol : Hashable {
     var name: String {get}
-    var nameID: Int? {get}
+    var nameID: Int {get}
     var identifier: Int {get}
     
+    //init (name: String, nameID: Int, identifier: Int)
 }
 
 extension OTFBaseProtocol {
