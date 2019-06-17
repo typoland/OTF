@@ -55,11 +55,17 @@ extension OTFTypeProtocol {
                           nameID: $0.nameID,
                           identifier: $0.identifier,
                           defaultSelector: $0.defaultSelector)} as! Self.Selectors
-        
+
         return Self.init (name: name,
                           nameID: nameID,
                           identifier: identifier,
                           exclusive: exclusive,
                           selectors: _selectors)
+    }
+}
+
+extension OTFTypeProtocol {
+    public static func == <F2:OTFTypeProtocol>(lhs: Self, rhs: F2) -> Bool {
+        return lhs.name == rhs.name
     }
 }
