@@ -1,6 +1,6 @@
 //
-//  OTFFeatureType.swift
-//  OTF
+//  OTFFeatureController.swift
+//  OTFKit
 //
 //  Created by Łukasz Dziedzic on 10/06/2019.
 //  Copyright © 2019 Łukasz Dziedzic. All rights reserved.
@@ -8,33 +8,31 @@
 
 import Foundation
 
-
-
-
-open class OTFType<S: OTFSelectorProtocol>: OTFBase, OTFTypeProtocol {
+public class OTFType<S: OTFSelectorProtocol>: OTFBase, OTFTypeProtocol {
     
     public typealias Selector = S
-    public var selectors: OrderedSet<Selector>
-    public var exclusive:Int
-    
+    public var exclusive: Int
+
+    var _selectors: OrderedSet<Selector>
+    public var selectors: Array<Selector> {
+        get { return Array(_selectors) }
+        set { _selectors = OrderedSet( newValue ) }
+    }
     
     required public init(name: String,
                 nameID: Int,
                 identifier: Int,
                 exclusive: Int,
-                selectors: OrderedSet<Selector>)
+                selectors: [Selector] = [])
     {
+        self._selectors = OrderedSet(selectors)
         self.exclusive = exclusive
-        self.selectors = selectors
         super.init(name: name, nameID: nameID, identifier: identifier)
     }
-
 }
 
-extension OTFType: CustomStringConvertible {
-    
-    public var description:String {
-        return "Type \(name)"
+extension OTFType {
+    public var description: String {
+        return "OldOTFType \"\(name)\""
     }
-    
 }
