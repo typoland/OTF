@@ -49,18 +49,17 @@ public protocol OTFTypeProtocol: OTFBaseProtocol {
 }
 
 extension OTFTypeProtocol {
-    static func type (name: String, nameID: Int, identifier: Int, exclusive: Int, selectors: [(name:String, nameID:Int, identifier:Int, defaultSelector:Int)]) -> Self {
-        let _selectors: Selectors =  selectors.map {
-            Selector.init(name: $0.name,
-                          nameID: $0.nameID,
-                          identifier: $0.identifier,
-                          defaultSelector: $0.defaultSelector)} as! Self.Selectors
-
-        return Self.init (name: name,
+    init (name: String, nameID: Int, identifier: Int, exclusive: Int, selectors: [(name:String, nameID:Int, identifier:Int, defaultSelector:Int)]) {
+		
+        self.init (name: name,
                           nameID: nameID,
                           identifier: identifier,
                           exclusive: exclusive,
-                          selectors: _selectors)
+						  selectors: selectors.map {
+							Selector.init(name: $0.name,
+										  nameID: $0.nameID,
+										  identifier: $0.identifier,
+										  defaultSelector: $0.defaultSelector)} as! Self.Selectors)
     }
 }
 

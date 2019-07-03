@@ -13,7 +13,7 @@ extension NSFont {
     public func has<T:OTFTypeProtocol>(type:T, selector:T.Selector?) -> Bool {
         let types:[T] = featuresDescriptions()
         guard let typeInFont = types.filter({$0.name == type.name}).first
-            else {return false}
+            else { return false }
         if let selector = selector {
             guard typeInFont.selectors.filter({$0.name == selector.name}).first != nil
                 else {return false}
@@ -21,17 +21,22 @@ extension NSFont {
         }
         return true //If selector is nil, we're looking just for type
     }
-    
+	
+	
     public func featuresDescriptions <T:OTFTypeProtocol> () -> [T] {
         typealias S = T.Selector
         var result: [T] = []
-        for t in _featuresDescriptions {
-            result.append(T.type(name: t.name, nameID: t.nameID, identifier: t.identifier, exclusive: t.exclusive, selectors: t.selectors))
+        for description in _featuresDescriptions {
+            result.append(T.init(name: description.name,
+								 nameID: description.nameID,
+								 identifier: description.identifier,
+								 exclusive: description.exclusive,
+								 selectors: description.selectors))
         }
         return result
     }
     
-    public var _featuresDescriptions : [(name:String,
+    private var _featuresDescriptions : [(name:String,
         nameID:Int,
         identifier:Int,
         exclusive:Int,
@@ -73,12 +78,11 @@ extension NSFont {
                 result.append((name: name, nameID: nameID, identifier: identifier, exclusive: exclusive, selectors: selectors))
                 
             }
-            
         }
         return result
     }
     
-    var allChars:String {
+    var allChars: String {
         get {
             print("getting AllChars")
             let allFontChars = self.coveredCharacterSet.intersection(CharacterSet.controlCharacters.inverted)
