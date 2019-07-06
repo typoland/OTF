@@ -19,13 +19,14 @@ public class OTFType<S: OTFSelectorProtocol>: OTFBase, OTFTypeProtocol {
         set { _selectors = OrderedSet( newValue ) }
     }
     
-    required public init(name: String,
-                nameID: Int,
-                identifier: Int,
-                exclusive: Int,
-                selectors: [Selector] = [])
-    {
-        self._selectors = OrderedSet(selectors)
+	required public init(
+		name: String,
+		nameID: Int,
+		identifier: Int,
+		exclusive: Int,
+		selectors: [Selector] = [])
+	{
+		self._selectors = OrderedSet(selectors)
         self.exclusive = exclusive
         super.init(name: name, nameID: nameID, identifier: identifier)
     }
@@ -33,6 +34,6 @@ public class OTFType<S: OTFSelectorProtocol>: OTFBase, OTFTypeProtocol {
 
 extension OTFType {
     public var description: String {
-        return "OldOTFType \"\(name)\""
+        return "OTFType \"\(name)\""
     }
 }
