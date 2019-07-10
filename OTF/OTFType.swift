@@ -34,6 +34,6 @@ public class OTFType<S: OTFSelectorProtocol>: OTFBase, OTFTypeProtocol {
 
 extension OTFType: CustomStringConvertible {
     public var description: String {
-		return "\nOTFType: \"\(name)\":" + selectors.reduce(into: "", {$0+="\n\t\"\($1)\""})
+		return "\nOTFType: \"\(name)\" nameID:\(nameID) identifier:\(identifier) excusive:\(exclusive)" + selectors.reduce(into: "", {$0+="\n\t\($1)"})
     }
 }
